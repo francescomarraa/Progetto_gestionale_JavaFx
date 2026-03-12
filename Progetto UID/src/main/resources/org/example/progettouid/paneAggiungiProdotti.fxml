@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane styleClass="clienti-root" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.progettouid.controller.AggiungiProdottiController">
+
+    <Label styleClass="form-title" text="Inserisci nuovo prodotto" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="20" />
+
+    <VBox spacing="18" styleClass="form-card" AnchorPane.bottomAnchor="80" AnchorPane.leftAnchor="80" AnchorPane.rightAnchor="80" AnchorPane.topAnchor="80">
+
+        <HBox alignment="CENTER" spacing="40">
+
+            <VBox spacing="14">
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label styleClass="form-label" text="Codice" />
+                    <TextField fx:id="txtCodiceProdotto" />
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label styleClass="form-label" text="Nome" />
+                    <TextField fx:id="txtNomeProdotto" />
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label styleClass="form-label" text="Prezzo" />
+                    <TextField fx:id="txtPrezzoUnitario" />
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label styleClass="form-label" text="Quantità" />
+                    <TextField fx:id="txtQuantitaProdotto" />
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label styleClass="form-label" text="Categoria" />
+                    <TextField fx:id="txtCategoria" />
+                </HBox>
+            </VBox>
+
+            <VBox spacing="14">
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label styleClass="form-label" text="Fornitore" />
+                    <ChoiceBox fx:id="cbFornitore" />
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label styleClass="form-label" text="Data carico" />
+                    <DatePicker fx:id="dpDataCarico" />
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label styleClass="form-label" text="Immagine" />
+                    <HBox spacing="6">
+                        <TextField fx:id="txtImmagine" />
+                        <Button fx:id="btnImmagine" onAction="#apriFilePicker" styleClass="btn-secondary" text="..." />
+                    </HBox>
+                </HBox>
+            </VBox>
+
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="20" styleClass="form-actions">
+            <Button fx:id="btnCaricaProdotto" onAction="#aggiungiProdotto" prefHeight="25.0" prefWidth="170.0" styleClass="btn-caricaprodotto" text="Carica prodotto" />
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>

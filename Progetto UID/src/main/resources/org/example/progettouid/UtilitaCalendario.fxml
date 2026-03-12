@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" styleClass="anchor-pane-calendario" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.progettouid.controller.UtilitaCalendarioController">
+    <children>
+        <Label alignment="CENTER" layoutX="50.0" layoutY="-1.0" prefHeight="41.0" prefWidth="850.0" styleClass="main-title-calendario" text="Calendario" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Label>
+        <VBox alignment="TOP_CENTER" layoutX="517.0" layoutY="60.0" prefHeight="577.0" prefWidth="352.0" styleClass="form-vbox-calendario" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="66.0">
+            <children>
+                <Label alignment="TOP_CENTER" prefHeight="45.0" prefWidth="375.0" styleClass="section-header-calendario" text="Registra  evento!">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="63.0" prefWidth="28.0" />
+                <HBox alignment="CENTER" prefHeight="67.0" prefWidth="484.0" styleClass="input-hbox-calendario">
+                    <children>
+                        <Label prefHeight="67.0" prefWidth="102.0" styleClass="label-field-calendario" text="Titolo:  ">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="inserisciTitoloText" prefHeight="25.0" prefWidth="210.0" promptText="Inserisci il titolo dell'evento" styleClass="text-field-calendario" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="67.0" prefWidth="484.0" styleClass="input-hbox-calendario">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="67.0" prefWidth="104.0" styleClass="label-field-calendario" text="Descrizione:    ">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <TextArea fx:id="inserisciDescrizioneText" prefHeight="67.0" prefWidth="210.0" promptText="inserisci una descrizione" styleClass="text-area-calendario" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="67.0" prefWidth="484.0" styleClass="input-hbox-calendario">
+                    <children>
+                        <Label prefHeight="67.0" prefWidth="102.0" styleClass="label-field-calendario" text="Luogo:">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="inserisciLuogoText" prefHeight="25.0" prefWidth="210.0" promptText="Inserisci il luogo dell'evento" styleClass="text-field-calendario" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="67.0" prefWidth="484.0" styleClass="input-hbox-calendario">
+                    <children>
+                        <Label prefHeight="67.0" prefWidth="102.0" styleClass="label-field-calendario" text="Data:">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <DatePicker fx:id="InserisciDatePicker" prefHeight="25.0" prefWidth="211.0" styleClass="date-picker-calendario" />
+                    </children>
+                </HBox>
+                <Button id="buttonGreen2" fx:id="creaEventButton" mnemonicParsing="false" onAction="#addEvent" prefHeight="33.0" prefWidth="122.0" styleClass="button-save-calendario" text="Salva evento">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></Button>
+                <Label text="" /> <Button id="buttonGreen3" fx:id="rimuoviEventButton" mnemonicParsing="false" onAction="#removeEvent" prefHeight="33.0" prefWidth="122.0" styleClass="button-remove-calendario" text="Rimuovi evento">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            </children>
+        </VBox>
+        <ScrollPane fx:id="scrollPane" fitToWidth="true" layoutX="29.0" layoutY="66.0" prefHeight="577.0" prefWidth="487.0" styleClass="scroll-pane-calendario" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="384.0" AnchorPane.topAnchor="66.0">
+            <content>
+                <GridPane fx:id="gridPane" alignment="TOP_CENTER" hgap="20.0" prefWidth="501.0" styleClass="grid-pane-calendario" vgap="20.0">
+                    <columnConstraints>
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <padding>
+                        <Insets bottom="30.0" />
+                    </padding>
+                    <rowConstraints>
+                        <RowConstraints />
+                    </rowConstraints>
+                    <children>
+                        <Label alignment="TOP_CENTER" prefHeight="27.0" prefWidth="505.0" styleClass="section-header-light-calendario" text="Eventi Registrati">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </GridPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

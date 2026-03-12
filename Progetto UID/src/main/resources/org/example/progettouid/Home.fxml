@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="502.0" prefWidth="700.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.progettouid.controller.HomeController">
+
+    <AnchorPane prefHeight="54.0" styleClass="top-bar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <Button fx:id="btnToggleSidebar" prefHeight="54.0" prefWidth="54.0" styleClass="menu-icon-button" onAction="#toggleSidebar">
+            <cursor><Cursor fx:constant="HAND" /></cursor>
+            <graphic>
+                <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                    <image><Image url="@../icon/menuIconWhite.png" /></image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <MenuButton fx:id="menuButton" layoutX="541.0" layoutY="9.0" styleClass="menu-button" text="Luigi Piatti" AnchorPane.rightAnchor="14.0">
+            <items>
+                <MenuItem onAction="#apriImpostazioni" text="Impostazioni Account">
+                    <graphic>
+                        <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                            <image><Image url="@../icon/profileIconWhite.png" /></image>
+                        </ImageView>
+                    </graphic>
+                </MenuItem>
+                <SeparatorMenuItem />
+                <MenuItem onAction="#chiudiSessione" text="Exit">
+                    <graphic>
+                        <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                            <image><Image url="@../icon/closeMenuWhite.png" /></image>
+                        </ImageView>
+                    </graphic>
+                </MenuItem>
+            </items>
+            <graphic>
+                <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                    <image><Image url="@../icon/profileIconWhite.png" /></image>
+                </ImageView>
+            </graphic>
+            <font><Font size="16" /></font>
+            <cursor><Cursor fx:constant="HAND" /></cursor>
+        </MenuButton>
+    </AnchorPane>
+
+    <Separator AnchorPane.topAnchor="54.0" />
+
+    <AnchorPane fx:id="sidebar" prefWidth="206.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="55.0">
+
+        <VBox fillWidth="true" prefHeight="380.0" prefWidth="206.0" styleClass="sidebar-menu">
+            <Button graphicTextGap="20" onAction="#apriHome" styleClass="sidebar-button" text="Home">
+                <graphic><ImageView fitHeight="20" fitWidth="20"><image><Image url="@../icon/homeicon2.png" /></image></ImageView></graphic>
+            </Button>
+            <Button graphicTextGap="20" onAction="#mostraProdotti" styleClass="sidebar-button" text="Prodotti">
+                <graphic><ImageView fitHeight="20" fitWidth="20"><image><Image url="@../icon/prodotto.png" /></image></ImageView></graphic>
+            </Button>
+            <Button graphicTextGap="20" onAction="#apriClienti" styleClass="sidebar-button" text="Clienti">
+                <graphic><ImageView fitHeight="20" fitWidth="20"><image><Image url="@../icon/cliente.png" /></image></ImageView></graphic>
+            </Button>
+            <Button fx:id="btnFornitori" graphicTextGap="20" onAction="#apriFornitore" styleClass="sidebar-button" text="Fornitori">
+                <graphic><ImageView fitHeight="20" fitWidth="20"><image><Image url="@../icon/fornitore.png" /></image></ImageView></graphic>
+            </Button>
+            <Button graphicTextGap="20" onAction="#apriMagazzino" styleClass="sidebar-button" text="Magazzino">
+                <graphic><ImageView fitHeight="20" fitWidth="20"><image><Image url="@../icon/iconWareHouseWhite.png" /></image></ImageView></graphic>
+            </Button>
+            <Button graphicTextGap="20" styleClass="sidebar-button" text="Utilità" onAction="#apriUtilita">
+                <graphic><ImageView fitHeight="20" fitWidth="20"><image><Image url="@../icon/helpIconWhite.png" /></image></ImageView></graphic>
+            </Button>
+            <Button graphicTextGap="20" onAction="#apriStatistiche" styleClass="sidebar-button" text="Statistiche">
+                <graphic><ImageView fitHeight="20" fitWidth="20"><image><Image url="@../icon/territorio.png" /></image></ImageView></graphic>
+            </Button>
+        </VBox>
+
+        <VBox fillWidth="true" styleClass="sidebar-footer" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <Button graphicTextGap="20" onAction="#apriImpostazioni" prefHeight="52.0" prefWidth="204.0" styleClass="sidebar-button" text="Impostazioni">
+                <graphic><ImageView fitHeight="20" fitWidth="20"><image><Image url="@../icon/impostazioni.png" /></image></ImageView></graphic>
+            </Button>
+        </VBox>
+    </AnchorPane>
+
+    <AnchorPane fx:id="contentArea" styleClass="content-area" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="206.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="58.0" />
+
+    <Button fx:id="openChatButton" onAction="#openChatWindow" styleClass="fab-button" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+        <graphic>
+            <ImageView fitHeight="42" preserveRatio="true">
+                <image><Image url="@../images/Pippoimg2.png" /></image>
+            </ImageView>
+        </graphic>
+    </Button>
+
+</AnchorPane>

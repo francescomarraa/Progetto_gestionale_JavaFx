@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefWidth="600" prefHeight="620"
+            stylesheets="@../css/style.css"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.progettouid.controller.AggiungiClienteController">
+
+    <Label text="Modifica cliente"
+           styleClass="form-title"
+           AnchorPane.topAnchor="20"
+           AnchorPane.leftAnchor="0"
+           AnchorPane.rightAnchor="0"/>
+
+    <VBox spacing="16"
+          styleClass="form-card"
+          AnchorPane.topAnchor="80"
+          AnchorPane.leftAnchor="60"
+          AnchorPane.rightAnchor="60">
+
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <Label text="Nome" styleClass="form-label"/>
+            <TextField fx:id="nomeField" promptText="Inserisci nome"/>
+        </HBox>
+
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <Label text="Cognome" styleClass="form-label"/>
+            <TextField fx:id="cognomeField" promptText="Inserisci cognome"/>
+        </HBox>
+
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <Label text="Città" styleClass="form-label"/>
+            <TextField fx:id="cittaField" promptText="Inserisci città"/>
+        </HBox>
+
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <Label text="Telefono" styleClass="form-label"/>
+            <TextField fx:id="telefonoField" promptText="Inserisci telefono"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER_RIGHT" styleClass="form-actions">
+            <Button fx:id="btnSalva"
+                    text="Salva"
+                    onAction="#salvaCliente"
+                    styleClass="btn-primary"/>
+
+            <Button text="Annulla"
+                    onAction="#annulla"
+                    styleClass="btn-secondary"/>
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>
+

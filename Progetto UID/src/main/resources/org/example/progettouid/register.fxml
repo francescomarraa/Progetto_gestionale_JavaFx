@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane styleClass="root-pane" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.progettouid.controller.RegisterController">
+
+    <children>
+
+        <AnchorPane prefHeight="481.0" prefWidth="342.0" styleClass="left-pane">
+            <children>
+
+                <Text layoutX="52.0" layoutY="161.0" styleClass="label-primary" text="Inserisci la tua Email" />
+
+                <Text layoutX="52.0" layoutY="230.0" styleClass="label-primary" text="Inserisci la tua Password" />
+
+                <Button id="buttonRegister" fx:id="buttonRegister" layoutX="80.0" layoutY="309.0" onAction="#register" prefHeight="34.0" prefWidth="149.0" styleClass="btn-primary" text="Register" textAlignment="CENTER">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+
+                <Text layoutX="113.0" layoutY="104.0" styleClass="title-primary" text="Register">
+                    <font>
+                        <Font name="Gill Sans Nova Bold" size="32.0" />
+                    </font>
+                </Text>
+
+                <Button id="buttonTopRegister" fx:id="buttonTopRegister" layoutX="10.0" layoutY="10.0" onAction="#backToLogin" prefHeight="55.0" prefWidth="55.0" styleClass="btn-primary-round" text="&lt;">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+
+                <Text fx:id="info" layoutX="59.0" layoutY="413.0" styleClass="info-text" text="Password must contains at least once lowercase and uppercase letter and must be least 6 character." wrappingWidth="221.8" />
+
+                <TextField fx:id="textRegEmaill" layoutX="51.0" layoutY="172.0" prefHeight="26.0" prefWidth="238.0" promptText="Inserisci la tua Email" />
+
+                <PasswordField fx:id="textRegPasswordd" layoutX="51.0" layoutY="241.0" prefHeight="26.0" prefWidth="238.0" promptText="Inserisci la tua Password" />
+
+            </children>
+        </AnchorPane>
+
+        <AnchorPane layoutX="342.0" prefHeight="481.0" prefWidth="378.0" styleClass="right-pane">
+            <children>
+                <ImageView fitHeight="525.0" fitWidth="378.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logoUID-removebg-preview.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+
+    </children>
+</AnchorPane>

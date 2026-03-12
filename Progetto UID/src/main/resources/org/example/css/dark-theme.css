@@ -1,0 +1,281 @@
+/* =========================
+   DARK THEME - ProgettoUID
+   (override di style.css)
+   ========================= */
+
+/* Palette */
+* {
+    -fx-dark-bg: #0B1220;         /* sfondo app */
+    -fx-dark-surface: #0F172A;    /* superfici */
+    -fx-dark-card: #111827;       /* card */
+    -fx-dark-border: #1F2937;     /* bordi */
+    -fx-dark-text: #E5E7EB;       /* testo principale */
+    -fx-dark-muted: #9CA3AF;      /* testo secondario */
+    -fx-dark-accent: #3B82F6;     /* blu */
+    -fx-dark-accent-2: #2563EB;
+}
+
+/* === CONTAINER BASE === */
+AnchorPane,
+BorderPane,
+StackPane,
+VBox,
+HBox,
+GridPane,
+ScrollPane {
+    -fx-background-color: #0B1220;
+}
+
+.scroll-pane {
+    -fx-background-color: #0B1220;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: #0B1220;
+}
+
+.content-area {
+    -fx-background-color: #0B1220;
+}
+
+/* OVERRIDE ESPLICITO DELLE CARD DEL TEMA CHIARO */
+.form-card,
+.settings-card,
+.kpi-card,
+.status-card,
+.card {
+    -fx-background-color: -fx-dark-card !important;
+    -fx-border-color: -fx-dark-border;
+}
+
+/* CONTENT CENTRALE */
+.content-area > AnchorPane {
+    -fx-background-color: -fx-dark-bg;
+}
+
+
+/* Root generico */
+.root {
+    -fx-background-color: -fx-dark-bg;
+}
+
+/* Content area (nel tuo CSS era #F8FAFC) */
+.content-area {
+    -fx-background-color: -fx-dark-bg;
+}
+
+/* Se usi root specifici */
+.clienti-root,
+.home-root,
+.settings-root {
+    -fx-background-color: -fx-dark-bg;
+}
+
+/* Top bar / sidebar già scure, ma uniformiamo */
+.top-bar,
+.sidebar {
+    -fx-background-color: linear-gradient(to right, #0B1220, #0F172A);
+}
+
+/* Sidebar buttons */
+.sidebar-button {
+    -fx-text-fill: -fx-dark-text;
+    -fx-border-color: transparent transparent rgba(255,255,255,0.06) transparent;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: rgba(255,255,255,0.06);
+}
+
+.sidebar-button:focused {
+    -fx-background-color: rgba(59,130,246,0.22);
+    -fx-text-fill: white;
+}
+
+/* KPI / Status cards (nel tuo CSS erano white) */
+.kpi-card,
+.status-card,
+.settings-card,
+.form-card {
+    -fx-background-color: -fx-dark-card;
+    -fx-border-color: -fx-dark-border;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+/* Titoli e testi */
+.label,
+.text {
+    -fx-text-fill: -fx-dark-text;
+}
+
+.home-subtitle,
+.home-date,
+.kpi-label {
+    -fx-text-fill: -fx-dark-muted;
+}
+
+.home-title,
+.status-title {
+    -fx-text-fill: -fx-dark-text;
+}
+
+/* =========================
+   INPUTS (TextField, PasswordField, TextArea)
+   ========================= */
+.text-field,
+.password-field,
+.text-area {
+    -fx-background-color: #0B1020;
+    -fx-text-fill: -fx-dark-text;
+
+    -fx-border-color: -fx-dark-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+
+    -fx-prompt-text-fill: rgba(229,231,235,0.55);
+}
+
+.text-field:focused,
+.password-field:focused,
+.text-area:focused {
+    -fx-border-color: rgba(59,130,246,0.75);
+    -fx-effect: dropshadow(gaussian, rgba(59,130,246,0.15), 10, 0.25, 0, 0);
+}
+
+/* =========================
+   CHOICEBOX / DATEPICKER
+   ========================= */
+.choice-box,
+.date-picker {
+    -fx-background-color: #0B1020;
+    -fx-border-color: -fx-dark-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.choice-box .label {
+    -fx-text-fill: -fx-dark-text;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent; /* eredita container */
+    -fx-border-color: transparent;
+    -fx-text-fill: -fx-dark-text;
+}
+
+/* Popup (dropdown) */
+.context-menu {
+    -fx-background-color: -fx-dark-surface;
+    -fx-border-color: -fx-dark-border;
+}
+
+.menu-item .label {
+    -fx-text-fill: -fx-dark-text;
+}
+
+.menu-item:hover {
+    -fx-background-color: rgba(59,130,246,0.20);
+}
+
+/* =========================
+   BUTTONS (riusa le tue classi)
+   ========================= */
+.btn-primary {
+    -fx-background-color: -fx-dark-accent-2;
+    -fx-text-fill: white;
+}
+
+.btn-primary:hover {
+    -fx-background-color: -fx-dark-accent;
+}
+
+.btn-secondary {
+    -fx-background-color: #1F2937;
+    -fx-text-fill: -fx-dark-text;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #2B3647;
+}
+
+.btn-danger {
+    -fx-background-color: #DC2626;
+    -fx-text-fill: white;
+}
+
+.btn-outline {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(59,130,246,0.8);
+    -fx-text-fill: rgba(59,130,246,0.9);
+}
+
+.btn-outline:hover {
+    -fx-background-color: rgba(59,130,246,0.12);
+}
+
+/* =========================
+   TABLEVIEW (fondamentale per dark mode)
+   ========================= */
+.table-view {
+    -fx-background-color: -fx-dark-card;
+    -fx-border-color: -fx-dark-border;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #0F172A;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: #0F172A;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: -fx-dark-text;
+    -fx-font-weight: bold;
+}
+
+/* Righe */
+.table-row-cell {
+    -fx-background-color: -fx-dark-card;
+    -fx-text-background-color: -fx-dark-text;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #0F1A2E;
+}
+
+/* Selezione più “vera” e leggibile */
+.table-row-cell:selected {
+    -fx-background-color: rgba(37,99,235,0.55);
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* =========================
+   SCROLLBAR (per settings ecc.)
+   ========================= */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .track {
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-background-radius: 10;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: rgba(255,255,255,0.22);
+    -fx-background-radius: 10;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: rgba(255,255,255,0.30);
+}
+
+
+

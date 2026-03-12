@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="627.0" prefWidth="845.0" styleClass="clienti-root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.progettouid.controller.ListaFornitoriController">
+
+    <HBox spacing="8" styleClass="clienti-toolbar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <Button fx:id="btnAdd" onAction="#apriDialog" styleClass="btn-primary" text="Aggiungi" />
+
+        <Button fx:id="btnModifica" onAction="#modificaFornitore" styleClass="btn-secondary" text="Modifica" />
+
+        <Button fx:id="btnDel" onAction="#eliminaFornitori" styleClass="btn-danger" text="Elimina" />
+
+        <Button fx:id="btnScaricaPDF" onAction="#scaricaPdfFornitori" styleClass="btn-outline" text="Scarica PDF" />
+
+        <TextField fx:id="txtCercaF" promptText="Cerca fornitore..." styleClass="search-field" />
+
+        <Button fx:id="btnCerca" onAction="#cercaFornitore" styleClass="btn-primary" text="Cerca" />
+    </HBox>
+
+    <TableView fx:id="tabellaFornitori" styleClass="clienti-table" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="51.0">
+
+        <columns>
+            <TableColumn fx:id="colonnaNome" text="Nome" />
+            <TableColumn fx:id="colonnaCognome" text="Cognome" />
+            <TableColumn fx:id="colonnaVia" text="Via" />
+            <TableColumn fx:id="colonnaCap" text="CAP" />
+            <TableColumn fx:id="colonnaCitta" text="Città" />
+            <TableColumn fx:id="colonnaTelefono" text="Telefono" />
+            <TableColumn fx:id="colonnaRagioneSociale" text="Ragione Sociale" />
+            <TableColumn fx:id="colonnaPartitaIva" text="Partita IVA" />
+        </columns>
+
+    </TableView>
+
+</AnchorPane>

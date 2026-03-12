@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxWidth="Infinity" spacing="24" styleClass="home-root" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.progettouid.controller.paneHomeController">
+
+    <HBox alignment="CENTER_LEFT" spacing="20" styleClass="home-header">
+
+        <VBox spacing="4">
+            <Label fx:id="lblDashboardTitle" styleClass="home-title" text="Dashboard aziendale" />
+            <Label styleClass="home-subtitle" text="Panoramica generale dell'attività" />
+        </VBox>
+
+        <Region HBox.hgrow="ALWAYS" />
+
+        <VBox alignment="CENTER_RIGHT" spacing="4">
+            <Label fx:id="dateLabel" styleClass="home-date" />
+            <Label fx:id="timeLabel" styleClass="home-time" />
+        </VBox>
+
+    </HBox>
+
+    <Region prefHeight="16" />
+
+    <HBox maxWidth="Infinity" spacing="20">
+
+        <VBox styleClass="kpi-card">
+            <Label styleClass="kpi-label" text="Prodotti" />
+            <Label fx:id="lblTotProdotti" styleClass="kpi-value" text="124" />
+        </VBox>
+
+        <VBox styleClass="kpi-card">
+            <Label styleClass="kpi-label" text="Fornitori" />
+            <Label fx:id="lblTotFornitori" styleClass="kpi-value" text="18" />
+        </VBox>
+
+        <VBox styleClass="kpi-card">
+            <Label styleClass="kpi-label" text="Clienti" />
+            <Label fx:id="lblTotClienti" styleClass="kpi-value" text="76" />
+        </VBox>
+
+    </HBox>
+
+    <VBox spacing="10" styleClass="status-card">
+
+        <Label styleClass="status-title" text="Stato generale" />
+
+        <Label fx:id="lblUltimoProdotto" styleClass="status-item" text="• Ultimo prodotto inserito: Prodotto" />
+        <Label fx:id="lblUltimoCliente" styleClass="status-item" text="• Ultimo cliente registrato: Pippo" />
+        <Label fx:id="lblUltimoFornitore" styleClass="status-item" text="• Ultimo fornitore aggiunto: ABC S.p.A." />
+
+    </VBox>
+
+</VBox>

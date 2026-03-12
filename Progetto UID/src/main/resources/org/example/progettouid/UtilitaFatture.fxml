@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" styleClass="anchor-pane-fattura" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.progettouid.controller.UtilitaFatturaController">
+    <children>
+        <BorderPane layoutX="142.0" layoutY="40.0" prefHeight="610.0" prefWidth="900.0" styleClass="border-pane-fattura" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+            <top>
+                <HBox prefHeight="16.0" prefWidth="900.0" styleClass="top-bar-fattura" BorderPane.alignment="CENTER" />
+            </top>
+            <center>
+                <VBox prefHeight="445.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Separator prefWidth="200.0" styleClass="separator-fattura" />
+                        <VBox prefHeight="90.0" prefWidth="600.0" styleClass="info-section-fattura">
+                            <children>
+                                <HBox alignment="CENTER_RIGHT" prefHeight="81.0" prefWidth="895.0">
+                                    <children>
+                                        <VBox prefHeight="81.0" prefWidth="344.0" spacing="5.0">
+                                            <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="350.0" spacing="10.0">
+                                                    <children>
+                                                        <Label prefWidth="187.0" styleClass="label-header-fattura" text="RICEVUTA FISCALE n°" />
+                                                        <TextField fx:id="numeroRicevutaText" prefHeight="27.0" prefWidth="157.0" promptText="inserisci numero" styleClass="text-field-fattura" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="19.0" prefWidth="350.0" spacing="10.0">
+                                                    <children>
+                                                        <Label prefWidth="142.0" styleClass="label-header-fattura" text="Numero ordine:" />
+                                                        <TextField fx:id="numeroOrdineText" prefHeight="23.0" prefWidth="202.0" promptText="numero ordine" styleClass="text-field-fattura" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="350.0" spacing="10.0">
+                                                    <children>
+                                                        <Label prefWidth="187.0" styleClass="label-header-fattura" text="Data ordine :" />
+                                                        <DatePicker fx:id="ordineDate" prefHeight="25.0" prefWidth="289.0" promptText="scegli una data" styleClass="date-picker-fattura" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <Separator prefWidth="200.0" styleClass="separator-fattura" />
+                        <HBox alignment="CENTER_RIGHT" prefHeight="136.0" prefWidth="900.0" styleClass="client-section-fattura">
+                            <children>
+                                <VBox prefHeight="100.0" prefWidth="724.0" spacing="8.0">
+                                    <children>
+                                        <Label styleClass="section-title-fattura" text="Cliente" />
+                                        <HBox alignment="CENTER_LEFT" prefHeight="17.0" prefWidth="724.0" spacing="10.0">
+                                            <children>
+                                                <Label prefWidth="120.0" styleClass="label-fattura" text="Inserisci cliente:" />
+                                                <ChoiceBox fx:id="ClienteChoiceBox" prefWidth="436.0" styleClass="choice-box-fattura" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="12.0" prefWidth="724.0" spacing="10.0">
+                                            <children>
+                                                <Label prefWidth="120.0" styleClass="label-fattura" text="Inserisci P.IVA :" />
+                                                <TextField fx:id="IvaClienteText" prefWidth="437.0" promptText="partita IVA" styleClass="text-field-fattura" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <Separator prefHeight="12.0" prefWidth="600.0" styleClass="separator-fattura" />
+                        <VBox prefHeight="80.0" prefWidth="900.0" styleClass="product-entry-fattura">
+                            <children>
+                                <Label alignment="CENTER" maxWidth="Infinity" styleClass="section-title-fattura" text="Dettaglio Prodotto">
+                                    <VBox.margin><Insets bottom="10.0" /></VBox.margin>
+                                </Label>
+                                <HBox alignment="CENTER" prefHeight="35.0" prefWidth="900.0" spacing="10.0">
+                                    <children>
+                                        <Label styleClass="label-fattura" text="Prodotto:" />
+                                        <ChoiceBox fx:id="inserisciProdottoChoice" prefWidth="200.0" styleClass="choice-box-fattura" />
+                                        <Label styleClass="label-fattura" text="Q.tà:" />
+                                        <TextField fx:id="quantitaProdottoText" prefWidth="80.0" styleClass="text-field-fattura" />
+                                        <Label styleClass="label-fattura" text="IVA %:" />
+                                        <TextField fx:id="ivaProdottoText" prefWidth="60.0" styleClass="text-field-fattura" />
+                                        <Button fx:id="addProdottoButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addProdotto" prefHeight="30.0" prefWidth="97.0" styleClass="button-add-fattura" text="Aggiungi">
+                                            <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../icon/addGreenIcon.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <TableView fx:id="prodottiTable" prefHeight="244.0" prefWidth="900.0" styleClass="table-view-fattura">
+                            <columns>
+                                <TableColumn fx:id="columnIdProdottoProdotto" prefWidth="100.0" text="ID prodotto" />
+                                <TableColumn fx:id="columnNomeProdotto" prefWidth="200.0" text="Nome" />
+                                <TableColumn fx:id="columnCategoriaProdotto" prefWidth="150.0" text="Categoria" />
+                                <TableColumn fx:id="columnQuantitaProdotto" prefWidth="100.0" text="Quantità" />
+                                <TableColumn fx:id="columnPrezzoProdotto" prefWidth="120.0" text="Prezzo" />
+                                <TableColumn fx:id="columnIvaProdotto" prefWidth="100.0" text="IVA" />
+                            </columns>
+                        </TableView>
+                        <VBox prefHeight="130.0" prefWidth="900.0" styleClass="summary-section-fattura">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="50.0" spacing="20.0">
+                                    <children>
+                                        <Label styleClass="label-summary-fattura" text="Scadenza:" />
+                                        <DatePicker fx:id="scadenzaDate" styleClass="date-picker-fattura" />
+                                        <Label styleClass="label-summary-fattura" text="Imponibile:" />
+                                        <TextField fx:id="inserisciImponibileText" styleClass="text-field-fattura" />
+                                        <Label styleClass="label-summary-fattura" text="Sconto %:" />
+                                        <TextField fx:id="inserisciScontoText" styleClass="text-field-fattura" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_RIGHT" prefHeight="50.0" spacing="30.0">
+                                    <padding><Insets right="50.0" /></padding>
+                                    <children>
+                                        <Label styleClass="total-label-fattura" text="TOTALE IVA:" />
+                                        <Label fx:id="IvaLabelTot" styleClass="total-value-fattura" text="0 €" />
+                                        <Label styleClass="total-label-fattura" text="TOTALE PREZZO:" />
+                                        <Label fx:id="prezzoLabelTot" styleClass="total-value-fattura" text="0 €" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="60.0" spacing="20.0">
+                            <children>
+                                <Button fx:id="clearAllButton" mnemonicParsing="false" onAction="#clearAll" styleClass="button-clear-fattura" text="Pulisci tutto" />
+                                <Button fx:id="esportaPdfButton" mnemonicParsing="false" onAction="#esportaPdf" styleClass="button-pdf-fattura" text="Esporta PDF" />
+                            </children>
+                            <padding><Insets right="50.0" /></padding>
+                        </HBox>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+        <HBox alignment="CENTER" layoutX="145.0" prefHeight="40.0" prefWidth="755.0" styleClass="header-fattura" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Label styleClass="main-title-fattura" text="Emissione Fattura" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

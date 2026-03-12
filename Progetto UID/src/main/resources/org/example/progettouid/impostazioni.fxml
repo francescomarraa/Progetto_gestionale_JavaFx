@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToWidth="true" styleClass="settings-scroll" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.progettouid.controller.ImpostazioniController">
+
+    <content>
+        <VBox spacing="24" styleClass="settings-root">
+
+            <Label styleClass="settings-title" text="Impostazioni" />
+
+            <VBox spacing="12" styleClass="settings-card">
+                <Label styleClass="settings-section-title" text="Account" />
+                <Label text="Email account" />
+                <Label fx:id="lblEmailAccount" styleClass="settings-email" />
+                <PasswordField fx:id="txtPassword" promptText="Nuova password" />
+                <Button onAction="#salvaAccount" styleClass="btn-primary" text="Aggiorna Password" />
+            </VBox>
+
+            <VBox spacing="12" styleClass="settings-card">
+                <Label styleClass="settings-section-title" text="Azienda" />
+                <TextField fx:id="txtNomeAzienda" promptText="Nome azienda" />
+                <TextField fx:id="txtPiva" promptText="Partita IVA" />
+                <TextField fx:id="txtIndirizzo" promptText="Indirizzo" />
+                <TextField fx:id="txtTelefono" promptText="Telefono" />
+                <Button onAction="#salvaAzienda" styleClass="btn-primary" text="Salva dati azienda" />
+            </VBox>
+
+            <VBox spacing="12" styleClass="settings-card">
+
+                <Label styleClass="settings-section-title" text="Aspetto" />
+
+                <HBox alignment="CENTER_LEFT" spacing="16">
+                    <Label text="Tema" />
+                    <ChoiceBox fx:id="choiceTema">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Chiaro" />
+                                <String fx:value="Scuro" />
+                            </FXCollections>
+                        </items>
+                    </ChoiceBox>
+                </HBox>
+
+            </VBox>
+
+            <VBox spacing="12" styleClass="settings-card">
+                <Label styleClass="settings-section-title" text="Database" />
+                <Button onAction="#esportaDatabase" styleClass="btn-secondary" text="Esporta database" />
+            </VBox>
+
+            <VBox spacing="12" styleClass="settings-card">
+                <Label styleClass="settings-section-title" text="Informazioni" />
+                <Label text="Versione: 1.0.0" />
+                <Label text="Autore: Progetto UID" />
+            </VBox>
+
+        </VBox>
+    </content>
+</ScrollPane>

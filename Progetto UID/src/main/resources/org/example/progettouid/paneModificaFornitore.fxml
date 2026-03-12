@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefWidth="600" prefHeight="680"
+            stylesheets="@../css/style.css"
+            xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.progettouid.controller.AggiungiFornitoreController">
+
+    <Label text="Modifica fornitore"
+           styleClass="form-title"
+           AnchorPane.topAnchor="20"
+           AnchorPane.leftAnchor="0"
+           AnchorPane.rightAnchor="0"/>
+
+    <VBox spacing="16"
+          styleClass="form-card"
+          AnchorPane.topAnchor="80"
+          AnchorPane.leftAnchor="60"
+          AnchorPane.rightAnchor="60">
+
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <Label text="Nome" styleClass="form-label"/>
+            <TextField fx:id="nomeField" promptText="Inserisci nome"/>
+        </HBox>
+
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <Label text="Cognome" styleClass="form-label"/>
+            <TextField fx:id="cognomeField" promptText="Inserisci cognome"/>
+        </HBox>
+
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <Label text="Via" styleClass="form-label"/>
+            <TextField fx:id="viaField" promptText="Inserisci via"/>
+        </HBox>
+
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <Label text="CAP" styleClass="form-label"/>
+            <TextField fx:id="capField" promptText="Inserisci CAP"/>
+        </HBox>
+
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <Label text="Città" styleClass="form-label"/>
+            <TextField fx:id="cittaField" promptText="Inserisci città"/>
+        </HBox>
+
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <Label text="Ragione sociale" styleClass="form-label"/>
+            <TextField fx:id="ragioneSocialeField" promptText="Inserisci ragione sociale"/>
+        </HBox>
+
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <Label text="Partita IVA" styleClass="form-label"/>
+            <TextField fx:id="partitaIvaField" promptText="Inserisci Partita IVA"/>
+        </HBox>
+
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <Label text="Telefono" styleClass="form-label"/>
+            <TextField fx:id="telefonoField" promptText="Inserisci telefono"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER_RIGHT" styleClass="form-actions">
+            <Button text="Salva"
+                    onAction="#salvaFornitore"
+                    styleClass="btn-primary"/>
+
+            <Button text="Annulla"
+                    onAction="#annulla"
+                    styleClass="btn-secondary"/>
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>

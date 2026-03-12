@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane styleClass="root-pane" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.progettouid.controller.LoginController">
+
+    <children>
+
+        <AnchorPane prefHeight="482.0" prefWidth="363.0" styleClass="right-pane" />
+
+        <AnchorPane layoutX="359.0" prefHeight="509.0" prefWidth="363.0" styleClass="left-pane">
+            <children>
+
+                <Text layoutX="130.0" layoutY="97.0" styleClass="title-primary" text="Sign In" />
+
+                <Text layoutX="62.0" layoutY="155.0" styleClass="label-primary" text="Inserisci la tua Email" />
+
+                <Text layoutX="62.0" layoutY="236.0" styleClass="label-primary" text="Inserisci la tua Password" />
+
+                <TextField fx:id="textSignEmaill" layoutX="62.0" layoutY="168.0" prefWidth="238.0" promptText="Inserisci la tua Email" />
+
+                <PasswordField fx:id="textSignPasswordd" layoutX="62.0" layoutY="247.0" prefWidth="238.0" promptText="Inserisci la tua Password" />
+
+                <Button fx:id="signLogin" defaultButton="true" layoutX="92.0" layoutY="326.0" onAction="#login" prefHeight="35.0" prefWidth="162.0" styleClass="btn-primary" text="Sign In">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+
+                <Line endX="-3.4" layoutX="232.0" layoutY="369.0" startX="-100" stroke="#e5e5e585" />
+
+                <Hyperlink fx:id="hLRegister" layoutX="84.0" layoutY="377" onAction="#goToRegister" prefWidth="192" text="Non sei registrato? Registrati" />
+            </children>
+        </AnchorPane>
+        <ImageView fitHeight="410.0" fitWidth="363.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/logoUID-removebg-preview.png" />
+            </image></ImageView>
+
+    </children>
+</AnchorPane>

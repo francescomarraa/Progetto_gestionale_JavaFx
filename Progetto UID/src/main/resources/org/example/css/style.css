@@ -1,0 +1,909 @@
+/* CSS file */
+
+/* Registration page CSS from line 5 to 80 */
+
+/* Root panel background */
+.root-pane {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d1b2a, #1e3a8a);
+}
+
+/* Left white panel */
+.left-pane {
+    -fx-background-color: white;
+}
+
+/* Right panel text */
+.right-pane {
+    -fx-background-color: transparent;
+}
+
+/* Main labels */
+.label-primary {
+    -fx-fill: #0a1f44;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI";
+}
+
+/* Large title */
+.title-primary {
+    -fx-fill: #0a1f44;
+    -fx-font-family: "Gill Sans Nova Bold";
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+/* Right panel title */
+.right-title {
+    -fx-fill: white;
+    -fx-font-family: "Gill Sans Nova Bold";
+    -fx-font-size: 20px;
+}
+
+/* Info text */
+.info-text {
+    -fx-fill: #464545;
+    -fx-font-size: 12px;
+}
+
+/* Primary button */
+.btn-primary {
+    -fx-background-color: #0a1f44;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+/* Hover effect: enlarge button smoothly */
+.btn-primary:hover {
+    -fx-scale-x: 1.07;
+    -fx-scale-y: 1.07;
+}
+
+/* Round back button */
+.btn-primary-round {
+    -fx-background-color: #0a1f44;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 19px;
+    -fx-background-radius: 50%;
+    -fx-cursor: hand;
+}
+
+/* Hover for round button */
+.btn-primary-round:hover {
+    -fx-scale-x: 1.10;
+    -fx-scale-y: 1.10;
+}
+
+
+/* Login page CSS */
+
+/* Optional: spacing for login text fields */
+.text-field, .password-field {
+    -fx-background-radius: 6px;
+    -fx-padding: 6px;
+}
+
+/* Hyperlink below login button */
+.hyperlink {
+    -fx-text-fill: #0a1f44;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.hyperlink:hover {
+    -fx-underline: true;
+    -fx-text-fill: #1e3a8a;
+}
+
+/* Home*/
+
+/* Stile per il contenitore del menu a tendina */
+.context-menu {
+    -fx-background-color: #1F2C47; /* Sfondo scuro coerente */
+    -fx-border-color: #4A5C7A;      /* Bordo sottile per separare */
+    -fx-border-width: 1px;
+    -fx-background-insets: 0;
+    -fx-padding: 5 0 5 0; /* Un po' di spazio sopra e sotto */
+}
+.menu-button{
+    -fx-background-color: #1F2C47;
+}
+.menu-button .label{
+    -fx-text-fill: white;
+}
+
+.menu-button:hover{
+    -fx-background-color: #2A3B5A;
+}
+/* Stile per ogni singolo MenuItem */
+.menu-item {
+    -fx-background-color: #1F2C47; /* Sfondo trasparente di base */
+    -fx-padding: 8px 20px;          /* Più spazio interno per ariosità */
+}
+
+/* Stile per il testo dentro il MenuItem ccc*/
+.menu-item .label {
+    -fx-text-fill: #E0E0E0; /* Testo bianco/grigio chiaro, non abbagliante */
+    -fx-font-size: 14px;
+
+}
+
+/* Effetto hover: quando il mouse è sopra un MenuItem */
+.menu-item:hover {
+    -fx-background-color: #2A3B5A; /* Un colore leggermente più chiaro per feedback */
+}
+
+/* Stile per il testo del MenuItem in hover */
+.menu-item:hover .label {
+    -fx-text-fill: white; /* Il testo diventa bianco puro in hover */
+}
+
+/* =========================
+   HOME PAGE
+   ========================= */
+
+.top-bar {
+    -fx-background-color: linear-gradient(to right, #1E293B, #1F2C47);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 8, 0.15, 0, 2);
+}
+
+.menu-icon-button {
+    -fx-background-color: transparent;
+}
+
+.menu-icon-button:hover{
+    -fx-background-color: rgba(255,255,255,0.08);
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: linear-gradient(to right, #1E293B, #1F2C47);
+    /*-fx-background-color: linear-gradient(to bottom, #1F2C47, #1A253D);*/
+}
+
+.sidebar-menu {
+    -fx-padding: 8 0;
+}
+
+.sidebar-footer {
+    -fx-padding: 8 0;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #DCE3F1;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 16 18;
+    -fx-alignment: CENTER_LEFT;
+    -fx-content-display: LEFT;
+    -fx-cursor: hand;
+    -fx-max-width: Infinity;
+    -fx-pref-width: 100%;
+    -fx-border-color: transparent transparent rgba(255,255,255,0.08) transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: rgba(255,255,255,0.08);
+    -fx-translate-x: 4;
+}
+
+.sidebar-button:focused {
+    -fx-background-color: rgba(59,130,246,0.18);
+    -fx-text-fill: white;
+}
+
+/* Content area */
+.content-area {
+    -fx-background-color: #F8FAFC;
+    -fx-padding: 20;
+}
+
+/* Floating button */
+.fab-button {
+    -fx-background-color: #1f2c47;   /* colore originale */
+    -fx-background-radius: 30;       /* forma originale */
+    -fx-cursor: hand;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+/* Solo ingrandimento in hover */
+.fab-button:hover {
+    -fx-scale-x: 1.12;
+    -fx-scale-y: 1.12;
+}
+
+/* =========================
+   HOME DASHBOARD
+   ========================= */
+
+/* Root */
+.home-root {
+    -fx-padding: 24;
+    -fx-max-width: Infinity;
+}
+
+/* Header */
+.home-header {}
+
+.home-title {
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+}
+
+.home-subtitle {
+    -fx-text-fill: #6b7280;
+}
+
+.home-date {
+    -fx-text-fill: #6b7280;
+}
+
+.home-time {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+
+/* KPI Cards */
+.kpi-card {
+    -fx-pref-width: 160;
+    -fx-spacing: 6;
+    -fx-padding: 16;
+
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+
+    -fx-effect: dropshadow(gaussian,
+    rgba(0,0,0,0.08),
+    8, 0.2, 0, 2);
+}
+
+.kpi-label {
+    -fx-text-fill: #6b7280;
+}
+
+.kpi-value {
+    -fx-font-size: 26;
+    -fx-font-weight: bold;
+}
+
+/* Stato generale */
+.status-card {
+    -fx-spacing: 10;
+    -fx-padding: 16;
+
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+
+    -fx-effect: dropshadow(gaussian,
+    rgba(0,0,0,0.06),
+    8, 0.2, 0, 2);
+}
+
+.status-title {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+
+.status-item {
+    -fx-text-fill: #111827;
+}
+
+/* =====================
+   CLIENTI PAGE
+   ===================== */
+
+.clienti-root {
+    -fx-background-color: #F8FAFC;
+}
+
+/* TOOLBAR */
+.clienti-toolbar {
+    -fx-padding: 10 14;
+    -fx-background-color: white;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* BUTTONS */
+.btn-primary {
+    -fx-background-color: #1f2c47;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-pref-height: 35;
+    -fx-pref-width: 110;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #1f2c47;
+}
+
+.btn-secondary {
+    -fx-background-color: #E5E7EB;
+    -fx-text-fill: #111827;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-pref-height: 35;
+    -fx-pref-width: 110;
+}
+
+.btn-danger {
+    -fx-background-color: #DC2626;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-pref-height: 35;
+    -fx-pref-width: 110;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #B91C1C;
+}
+
+.btn-outline {
+    -fx-background-color: transparent;
+    -fx-border-color: #2563EB;
+    -fx-text-fill: #2563EB;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-pref-height: 35;
+    -fx-pref-width: 120;
+}
+
+.btn-outline:hover {
+    -fx-background-color: rgba(37,99,235,0.08);
+}
+
+/* SEARCH */
+.search-field {
+    -fx-pref-height: 35;
+    -fx-pref-width: 240;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+}
+
+/* TABLE */
+.clienti-table {
+    -fx-background-color: white;
+    -fx-border-color: #E5E7EB;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #F1F5F9;
+}
+
+.table-view .column-header {
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(29, 78, 216, 0.75);
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* =========================
+   FORM CLIENTE
+   ========================= */
+
+.form-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-text-fill: #1f2937;
+}
+
+.form-card {
+    -fx-background-color: white;
+    -fx-padding: 24;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 12, 0.2, 0, 4);
+}
+
+.form-label {
+    -fx-pref-width: 100;
+    -fx-font-weight: bold;
+    -fx-text-fill: #374151;
+}
+
+.form-card TextField {
+    -fx-pref-width: 300;
+    -fx-background-radius: 6;
+}
+
+.form-actions {
+    -fx-padding: 10 0 0 0;
+}
+
+/* BOTTONI */
+
+.btn-primary {
+    -fx-background-color: #1f2c47;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-pref-width: 120;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #1f2c47;
+}
+
+.btn-secondary {
+    -fx-background-color: #e5e7eb;
+    -fx-text-fill: #111827;
+    -fx-background-radius: 6;
+    -fx-pref-width: 120;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #d1d5db;
+}
+
+/* =========================
+   FORM PRODOTTI (estensione)
+   ========================= */
+
+.form-card ChoiceBox,
+.form-card DatePicker,
+.form-card TextField {
+    -fx-pref-width: 260;
+    -fx-background-radius: 6;
+}
+
+/* ChoiceBox */
+.choice-box {
+    -fx-background-color: white;
+    -fx-border-color: #D1D5DB;
+    -fx-border-radius: 6;
+}
+
+/* DatePicker */
+.date-picker {
+    -fx-background-radius: 6;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #1f2c47;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+/* Creato un altro bottone per adattare meglio il testo */
+.btn-caricaprodotto {
+    -fx-background-color: #0a1f44;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+    -fx-pref-width: 170;
+}
+
+.btn-caricaprodotto:hover{
+    -fx-scale-x: 1.07;
+    -fx-scale-y: 1.07;
+}
+
+/* =========================
+   FORM FORNITORE (estensione)
+   ========================= */
+
+/* Solo se vuoi più spazio per label lunghe */
+.form-card .form-label {
+    -fx-pref-width: 140;
+}
+
+/* Mantieni i TextField uniformi */
+.form-card TextField {
+    -fx-pref-width: 320;
+}
+
+/* =========================
+   IMPOSTAZIONI
+   ========================= */
+
+.settings-root {
+    -fx-padding: 24;
+    -fx-background-color: #F8FAFC;
+}
+
+.settings-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+.settings-section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+/* CARD */
+.settings-card {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 12, 0.2, 0, 4);
+}
+
+/* INPUT */
+.settings-card TextField,
+.settings-card PasswordField,
+.settings-card ChoiceBox {
+    -fx-pref-width: 300;
+    -fx-background-radius: 6;
+}
+
+/* BOTTONI */
+.btn-primary {
+    -fx-background-color: #1f2c47;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-pref-width: 180;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #243553;
+}
+
+.btn-outline {
+    -fx-background-color: transparent;
+    -fx-border-color: #2563EB;
+    -fx-text-fill: #2563EB;
+    -fx-font-weight: bold;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-pref-width: 200;
+}
+
+.btn-outline:hover {
+    -fx-background-color: rgba(37,99,235,0.08);
+}
+
+.settings-scroll {
+    -fx-background-color: transparent;
+}
+
+.settings-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.settings-root {
+    -fx-padding: 24;
+}
+
+.settings-card {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0.2, 0, 3);
+}
+
+.settings-title {
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+}
+
+.settings-section-title {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+/* =========================
+   STATISTICHE
+   ========================= */
+
+.page-container {
+    -fx-background-color: #f9fafb;
+}
+
+.page-title {
+    -fx-text-fill: #111827;
+    -fx-font-weight: bold;
+}
+
+.page-subtitle {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 14px;
+}
+
+.stat-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-padding: 20 15 20 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 10, 0, 0, 4);
+}
+
+.stat-icon {
+    -fx-font-size: 30px;
+}
+
+.stat-label {
+    -fx-text-fill: #111827;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.primary-button {
+    -fx-background-color: #0d1b2a;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #1b263b;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #415a77;
+}
+
+/* =========================
+   Utilità
+   ========================= */
+
+.page-title {
+    -fx-text-fill: #111827;
+    -fx-font-weight: bold;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 14;
+    -fx-padding: 25;
+    -fx-min-width: 220;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 10, 0, 0, 4);
+}
+
+.card-title {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+
+.primary-button {
+    -fx-background-color: #1f2c47;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-padding: 8 20;
+}
+
+.primary-button:hover {
+    -fx-background-color: #1b263b;
+}
+
+/* =========================
+   Fattura
+   ========================= */
+/* --- STILE FATTURA --- */
+
+.anchor-pane-fattura {
+    -fx-background-color: #f8f9fa; /* Grigio pulito */
+}
+
+.header-fattura {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.main-title-fattura {
+    -fx-text-fill: #1b263b; /* Blu scuro */
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Sezioni */
+.info-section-fattura, .client-section-fattura, .product-entry-fattura {
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+}
+
+.section-title-fattura {
+    -fx-text-fill: #1b263b;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.label-header-fattura {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 14px;
+}
+
+.label-fattura {
+    -fx-text-fill: #34495e;
+}
+
+/* Campi Input */
+.text-field-fattura, .choice-box-fattura, .date-picker-fattura {
+    -fx-background-color: white;
+    -fx-border-color: #dcdde1;
+    -fx-border-radius: 4px;
+}
+
+.text-field-fattura:focused {
+    -fx-border-color: #1b263b;
+}
+
+/* Tabella */
+.table-view-fattura {
+    -fx-background-color: white;
+    -fx-border-color: #dfe6e9;
+    -fx-selection-bar: #415a77;
+}
+
+.table-view-fattura .column-header{
+    -fx-background-color: #1b263b;
+}
+
+.table-view-fattura .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+
+
+.label-summary-fattura {
+    -fx-text-fill: #1b263b;
+    -fx-font-weight: bold;
+}
+
+.total-label-fattura {
+    -fx-text-fill: #1b263b; /* Blu chiaro/Cyan per i titoli dei totali */
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.total-value-fattura {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Pulsanti */
+.button-add-fattura {
+    -fx-background-color: white;
+    -fx-text-fill: #1b263b;
+    -fx-border-color: #1b263b;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button-pdf-fattura {
+    -fx-background-color: #1b263b;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20 10 20;
+    -fx-cursor: hand;
+}
+
+.button-pdf-fattura:hover {
+    -fx-background-color: #415a77;
+}
+
+.button-clear-fattura {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e74c3c;
+    -fx-border-color: #e74c3c;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button-clear-fattura:hover {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+}
+
+/* =========================
+   Calendario
+   ========================= */
+/* Sfondo dell'intera pagina */
+.anchor-pane-calendario {
+    -fx-background-color: #f0f2f5; /* Grigio chiarissimo quasi bianco */
+}
+
+/* Titolo Principale in alto */
+.main-title-calendario {
+    -fx-text-fill: #0d1b2a; /* Nero/Blu scurissimo */
+    -fx-background-color: white;
+}
+
+/* Area Sinistra (ScrollPane e GridPane) */
+.scroll-pane-calendario {
+    -fx-background: linear-gradient(to bottom, #1b263b, #415a77);
+    -fx-background-color: transparent;
+    -fx-background-radius: 10px;
+    -fx-border-color: #1b263b;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+
+.scroll-pane-calendario .viewport {
+    -fx-background-color: transparent;
+}
+
+.grid-pane-calendario {
+    -fx-background-color: transparent;
+}
+
+.section-header-light-calendario {
+    -fx-text-fill: white;
+    -fx-padding: 10 0 10 0;
+}
+
+/* Area Destra (Form di registrazione) */
+.form-vbox-calendario {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+}
+
+.section-header-calendario {
+    -fx-text-fill: #1b263b;
+}
+
+.label-field-calendario {
+    -fx-text-fill: #0d1b2a;
+}
+
+/* Campi di testo */
+.text-field-calendario, .text-area-calendario, .date-picker-calendario {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5px;
+}
+
+.text-field-calendario:focused, .text-area-calendario:focused {
+    -fx-border-color: #3498db; /* Blu chiaro al focus */
+}
+
+/* Pulsanti */
+.button-save-calendario {
+    -fx-background-color: #1b263b; /* Blu scuro */
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.button-save-calendario:hover {
+    -fx-background-color: #415a77; /* Blu un po' più chiaro al passaggio */
+}
+
+.button-remove-calendario {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1b263b;
+    -fx-border-color: #1b263b;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.button-remove-calendario:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+
