@@ -1,4 +1,4 @@
-l progetto è un'applicazione desktop di gestione aziendale denominata OmniManage, sviluppata in Java con JavaFX. È concepito come un sistema ERP/CRM leggero per piccole e medie imprese, con particolare attenzione all'usabilità dell'interfaccia (come suggerisce il titolo).
+Il progetto è un'applicazione desktop di gestione aziendale denominata OmniManage, sviluppata in Java con JavaFX. È concepito come un sistema ERP/CRM leggero per piccole e medie imprese, con particolare attenzione all'usabilità dell'interfaccia (come suggerisce il titolo).
 
 Le sue funzionalità chiave includono:
 Gestione Anagrafiche: Moduli dedicati per l'inserimento, la modifica e la consultazione di Clienti, Fornitori e Prodotti (Magazzino).
